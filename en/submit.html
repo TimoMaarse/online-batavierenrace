@@ -1,0 +1,654 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Submit result - Online Batavierenrace</title>
+
+    
+    
+    <meta name="description"
+        content="Live results and livestream of the Online Batavierenrace, with overviews and statistics throughout the race.">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../static/results_processing/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/results_processing/css/fontawesome-all.css">
+    <link rel="stylesheet" type="text/css" href="../static/results_processing/css/theme.css">
+    <script src="../static/results_processing/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/results_processing/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../static/results_processing/img/logo.svg" />
+    
+</head>
+
+<body>
+    <header>
+        <nav class="mt-4 navbar navbar-expand-md navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand d-none d-md-block" href="index.html">
+                    <img class="logo" src="../static/results_processing/img/logo.svg" />
+                    <span class="brand-text">Online Batavierenrace</span>
+                </a>
+                <a class="navbar-brand d-block d-md-none" href="index.html">
+                    Online Batavierenrace
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
+                    aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main-navbar">
+                    
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="submit.html">Submit result</a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            
+                            
+                            <a class="nav-link" href="../nl/submit.html">NL</a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+        
+
+
+
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+        Race has finished, submissions are closed.
+    </div>
+
+
+
+<div class="modal fade" tabindex="-1" id="confirmation-modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Confirm submission
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Please double check that the screenshot contains <b>all</b> required information, otherwise it <b>will</b> be rejected!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cancel
+                </button>
+                <button type="button" class="btn btn-primary" onclick="submitForm()">
+                    Submit result
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="submit.html#" method="post" enctype="multipart/form-data" id="result-form" novalidate>
+    <input type="hidden" name="csrfmiddlewaretoken" value="yhGkXouGPBhbLDlhQDnZIsLEUdlPbn6gBdCr99jAH1GgdEP5lm9IccHyyhUbzSYe">
+    <div class="mb-3"><label class="form-label" for="id_team">Team</label><select name="team" class="form-select" title="" required id="id_team">
+  <option value="" selected>---------</option>
+
+  <option value="228">Aba444</option>
+
+  <option value="329">Aba4444</option>
+
+  <option value="285">ACLO</option>
+
+  <option value="306">AEGEE-Enschede</option>
+
+  <option value="265">AEGEE-Groningen</option>
+
+  <option value="396">Aktief Slip</option>
+
+  <option value="249">Arabic</option>
+
+  <option value="389">ASAC</option>
+
+  <option value="282">ASAV Aquila</option>
+
+  <option value="260">ASV Taste</option>
+
+  <option value="395">A.S.V. Tweeste</option>
+
+  <option value="222">ASZV SPONS</option>
+
+  <option value="330">AtlantFish</option>
+
+  <option value="314">AV Phoenix</option>
+
+  <option value="243">Batahazen</option>
+
+  <option value="328">Betonnen Bikkels</option>
+
+  <option value="371">Bier&amp;Titi</option>
+
+  <option value="355">Bieten</option>
+
+  <option value="360">Boght x Ta Phemme</option>
+
+  <option value="311">Bootavieren</option>
+
+  <option value="385">BOW</option>
+
+  <option value="241">BURP</option>
+
+  <option value="361">CCC</option>
+
+  <option value="221">Clio</option>
+
+  <option value="350">Complex</option>
+
+  <option value="408">CoStars</option>
+
+  <option value="298">C.S.V. Alpha</option>
+
+  <option value="399">Currimus</option>
+
+  <option value="257">Dance Fever: Groen zal het dit jaar overdoen!</option>
+
+  <option value="390">Dat is Peg, daar Stah je dan!</option>
+
+  <option value="227">D.A.V. Kronos 1</option>
+
+  <option value="230">D.A.V. Kronos 2</option>
+
+  <option value="354">D.B.V. Arriba</option>
+
+  <option value="264">De Leidsche Flesch</option>
+
+  <option value="259">Delftsche Studenten Bond</option>
+
+  <option value="320">Demcon - challenge today</option>
+
+  <option value="319">Demcon - imagine tomorrow</option>
+
+  <option value="380">Demos = Admiraal</option>
+
+  <option value="378">Demos = Keizer</option>
+
+  <option value="379">Demos = Koning</option>
+
+  <option value="392">De Ontzetting</option>
+
+  <option value="359">DHC Drienerlo</option>
+
+  <option value="267">Dignitates</option>
+
+  <option value="333">DIOK-Buitenwesten</option>
+
+  <option value="210">Dispuut Yorinf</option>
+
+  <option value="233">Divide et Medica 2021</option>
+
+  <option value="268">DPM Runners</option>
+
+  <option value="410">Drs. Vijfje</option>
+
+  <option value="239">D.S.S.V. Tartaros</option>
+
+  <option value="292">D.S.T.V. Aloha</option>
+
+  <option value="211">D.S.V. de Skeuvel</option>
+
+  <option value="263">DSZ WAVE</option>
+
+  <option value="365">EBF Groningen</option>
+
+  <option value="315">ECU&#x27;92</option>
+
+  <option value="304">ELS angELS</option>
+
+  <option value="251">E.L.S.Z.W.V. Aquamania</option>
+
+  <option value="224">ESHV DonQuishoot</option>
+
+  <option value="336">E.S.R. THÊTA</option>
+
+  <option value="349">ESVV Pusphaira</option>
+
+  <option value="344">E.S.W.Z.V. Nayade</option>
+
+  <option value="284">E.T.S.V. Scintilla</option>
+
+  <option value="335">e.t.s.v. Thor</option>
+
+  <option value="387">Eudaimonia-NTB</option>
+
+  <option value="248">EUR-Roadrunners</option>
+
+  <option value="309">Ferus Ebrius</option>
+
+  <option value="212">GeoVUsie</option>
+
+  <option value="290">GEWIS I</option>
+
+  <option value="310">GEWIS II</option>
+
+  <option value="238">GLV Idun</option>
+
+  <option value="376">G.S.A.V. Vitalis</option>
+
+  <option value="346">G.S.S.V. Squadraat</option>
+
+  <option value="331">G.S.S.V. Tjas</option>
+
+  <option value="219">G.S.T.V. Tritanium</option>
+
+  <option value="353">GSV, InTenS en Sodalicium</option>
+
+  <option value="400">GSV-Spierteam</option>
+
+  <option value="291">G.S.Z.V. De Golfbreker</option>
+
+  <option value="368">Hardboard/Aeolus</option>
+
+  <option value="348">Het rode gevaar</option>
+
+  <option value="377">Het RSG</option>
+
+  <option value="356">Hippodérin 020</option>
+
+  <option value="294">Huize Sarijopen</option>
+
+  <option value="393">H.V. Ockham</option>
+
+  <option value="295">Impalas</option>
+
+  <option value="405">In Den Natte - Aditi</option>
+
+  <option value="317">Industria rent zich rot</option>
+
+  <option value="216">Inter-Actief</option>
+
+  <option value="252">Japie één</option>
+
+  <option value="312">JFV Groningen</option>
+
+  <option value="388">JFV Nijmegen</option>
+
+  <option value="293">KUNST</option>
+
+  <option value="403">Lagakari</option>
+
+  <option value="313">Lopend Vuurtje</option>
+
+  <option value="235">Marie Curie</option>
+
+  <option value="409">MFVN</option>
+
+  <option value="318">MFVU</option>
+
+  <option value="357">M.S.T.V. Saturnus</option>
+
+  <option value="234">M.S.T.V. Stennis</option>
+
+  <option value="215">MSV Pulse</option>
+
+  <option value="273">MSV Santé</option>
+
+  <option value="286">Mundus</option>
+
+  <option value="358">Mundus 2</option>
+
+  <option value="225">Navigators Studentenvereniging Enschede</option>
+
+  <option value="322">Navigators Studentenvereniging Zwolle</option>
+
+  <option value="338">Nicolas Appert</option>
+
+  <option value="289">NijESAC</option>
+
+  <option value="351">Nijmeegse Studentenvereniging de Navigators</option>
+
+  <option value="384">Not fast, just flexible</option>
+
+  <option value="323">N.S.F.V. Morado CF</option>
+
+  <option value="272">N.S.H.C. Apeliotes</option>
+
+  <option value="261">NSRV Obelix</option>
+
+  <option value="308">N.S.S.S.V. Lacustris</option>
+
+  <option value="220">NSSV FEL</option>
+
+  <option value="281">NSVV FC Kunde</option>
+
+  <option value="370">NSVV Heyendaal</option>
+
+  <option value="236">N.S.Z.&amp;W.V. Hydrofiel</option>
+
+  <option value="246">O.D. WAZIG</option>
+
+  <option value="276">Ojee daar komt de OC</option>
+
+  <option value="213">Physics of Fluids</option>
+
+  <option value="374">Proton sekstafette</option>
+
+  <option value="266">PS1</option>
+
+  <option value="340">PS2TheMax</option>
+
+  <option value="334">Punch</option>
+
+  <option value="369">P.V.G. Standaard Lui</option>
+
+  <option value="297">RSK Enschede</option>
+
+  <option value="205">RU/HAN Universiteitsteam</option>
+
+  <option value="325">Running Teabags</option>
+
+  <option value="383">S.A. Communiqué</option>
+
+  <option value="324">S. A. Proto</option>
+
+  <option value="254">S.G. Daedalus</option>
+
+  <option value="256">SHOT</option>
+
+  <option value="347">Simius Hircus</option>
+
+  <option value="270">Sirius</option>
+
+  <option value="279">SKITS Amsterdam</option>
+
+  <option value="337">SKV Hercules</option>
+
+  <option value="382">Slow</option>
+
+  <option value="275">Sociologievereniging Usocia</option>
+
+  <option value="278">Speccies voor goud</option>
+
+  <option value="208">Speedy Lions</option>
+
+  <option value="363">SPiN Nijmegen</option>
+
+  <option value="207">SSA Amsterdam</option>
+
+  <option value="366">SSR-Leiden</option>
+
+  <option value="394">SSR-W I</option>
+
+  <option value="397">SSR-W ll</option>
+
+  <option value="373">Sticky</option>
+
+  <option value="402">STOKED Maastricht</option>
+
+  <option value="217">STORM</option>
+
+  <option value="372">Stress</option>
+
+  <option value="316">Studievereniging Industria</option>
+
+  <option value="381">Studievereniging KOers</option>
+
+  <option value="345">Studievereniging LiNK</option>
+
+  <option value="343">Studievereniging NOPFY</option>
+
+  <option value="209">Studiosi Mobilae 1</option>
+
+  <option value="223">Studiosi Mobilae 2</option>
+
+  <option value="342">Study Association Synergy</option>
+
+  <option value="229">STUGG</option>
+
+  <option value="274">SV Archimedes</option>
+
+  <option value="367">S.V. Construct</option>
+
+  <option value="326">SV Dimensie</option>
+
+  <option value="214">Sv. IDent</option>
+
+  <option value="232">S.V. Paradoks</option>
+
+  <option value="283">sv. STURAD</option>
+
+  <option value="242">S.V. Tabula Rasa</option>
+
+  <option value="375">SVTN &quot;J.D. van der Waals&quot;</option>
+
+  <option value="406">SVU Volleybal</option>
+
+  <option value="362">Syntaxis Oxytoc</option>
+
+  <option value="244">Tartlétos: quaRENtaine</option>
+
+  <option value="237">T.C. Ludica</option>
+
+  <option value="300">Team 25</option>
+
+  <option value="37">Team Desda</option>
+
+  <option value="203">Team Eindhoven</option>
+
+  <option value="327">Team SpoSpeCo</option>
+
+  <option value="204">Team TU Delft</option>
+
+  <option value="280">Team Utrecht UUHU</option>
+
+  <option value="303">Thalia</option>
+
+  <option value="258">the A-team</option>
+
+  <option value="364">The Jeebers</option>
+
+  <option value="301">The speeding Lions</option>
+
+  <option value="407">T.M.F.V Archigenes</option>
+
+  <option value="305">Trispiration Triathlon Team</option>
+
+  <option value="287">T.S.V. Plato</option>
+
+  <option value="247">U.A.Veau</option>
+
+  <option value="411">UHSK</option>
+
+  <option value="206">UM Team</option>
+
+  <option value="245">U.P.S.V. &quot;Unitas Pharmaceuticorum&quot;</option>
+
+  <option value="255">Uros</option>
+
+  <option value="288">Usain box</option>
+
+  <option value="386">US handbal</option>
+
+  <option value="341">USLAS ATLAS</option>
+
+  <option value="401">USVV Odysseus &#x27;91</option>
+
+  <option value="296">USZ&amp;WF Het Zinkstuk</option>
+
+  <option value="269">Utrechtse Technische Vereniging</option>
+
+  <option value="202">UT/Saxion Runningteam</option>
+
+  <option value="250">Vakgericht</option>
+
+  <option value="240">VESTING</option>
+
+  <option value="332">VGST</option>
+
+  <option value="271">VIB</option>
+
+  <option value="302">VIB-2</option>
+
+  <option value="299">VIP</option>
+
+  <option value="226">V.L.U.G.S.</option>
+
+  <option value="307">VOCUS</option>
+
+  <option value="398">vv Drienerlo</option>
+
+  <option value="277">WEM</option>
+
+  <option value="339">WHAP</option>
+
+  <option value="352">Witbreukswappies</option>
+
+  <option value="321">WOEST</option>
+
+  <option value="262">W.S.G. Isaac Newton</option>
+
+  <option value="404">W.S.R. Argo</option>
+
+  <option value="218">ZPV Piranha</option>
+
+</select></div>
+<div class="mb-3"><label class="form-label" for="id_team_code">Team code</label><input type="text" name="team_code" maxlength="16" class="form-control" placeholder="Team code" title="" required id="id_team_code"></div>
+<div class="mb-3"><label class="form-label" for="id_name">Name</label><input type="text" name="name" maxlength="256" class="form-control" placeholder="Name" title="" required id="id_name"></div>
+<div class="mb-3"><div class="form-check"><input type="checkbox" name="publish_name" class="form-check-input" id="id_publish_name"><label class="form-check-label" for="id_publish_name">Publish name</label></div></div>
+<div class="mb-3"><label class="form-label" for="id_gender">Gender</label><select name="gender" class="form-select" title="" id="id_gender">
+  <option value="" selected>---------</option>
+
+  <option value="M">Male</option>
+
+  <option value="F">Female</option>
+
+</select></div>
+<div class="mb-3"><label class="form-label" for="id_distance">Distance (km)</label><input type="number" name="distance" step="any" class="form-control" placeholder="Distance (km)" title="" required id="id_distance"></div>
+<div class="mb-3"><label class="form-label" for="id_time">Time (HH:MM:SS)</label><input type="text" name="time" placeholder="HH:MM:SS" class="form-control" title="" required id="id_time"></div>
+<div class="mb-3"><label class="form-label" for="id_speed">Speed (km/h)</label><input type="number" name="speed" step="any" class="form-control" placeholder="Speed (km/h)" title="" disabled id="id_speed"></div>
+<div class="mb-3"><label class="form-label" for="id_screenshot">Screenshot</label><br><input type="file" name="screenshot" accept="image/*" class="form-control" title="" required id="id_screenshot"></div>
+<div class="mb-3"><div class="form-check"><input type="checkbox" name="screenshot_correct" class="form-check-input" required id="id_screenshot_correct"><label class="form-check-label" for="id_screenshot_correct">The screenshot displays my name and the route, distance, starting date and time, and <b>elapsed</b> time (so not only the moving time) of the activity. Follow the guide <a href="strava.html">here</a> if you are using Strava (elapsed time is not visible by default!).</label></div></div>
+<div class="mb-3"><div class="form-check"><input type="checkbox" name="accept_privacy" class="form-check-input" required id="id_accept_privacy"><label class="form-check-label" for="id_accept_privacy">I accept: the privacystatement of the Batavierenrace; that the above data will be processed by the Batavierenrace, only for the purpose of creating public rankings for the online Batavierenrace; that my result&#x27;s distance and time will be published; that the gender will be published if provided; that my name will be published if indicated above. The screenshot will not be published and be deleted within four weeks of the end of the race, as well as other unpublished data. All data will be processed on Google Cloud.</label></div></div>
+    <div class="mb-3">
+    <button disabled type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#confirmation-modal">
+        <img src="../static/results_processing/img/icons/run.svg">
+        Submit
+    </button>
+    </div>
+</form>
+
+<script>
+    function filterInt(value) {
+        if (/^[-+]?(\d+|Infinity)$/.test(value)) {
+            return Number(value)
+        } else {
+            return NaN
+        }
+    }
+
+    function parseTime(string) {
+        var seconds = 0
+        const parts = string.split(":")
+        if (parts.length == 1) {
+            seconds = filterInt(parts[0])
+        } else if (parts.length == 2) {
+            seconds = filterInt(parts[0]) * 60 + filterInt(parts[1])
+        } else if (parts.length == 3) {
+            seconds = filterInt(parts[0]) * 3600 + filterInt(parts[1]) * 60 + filterInt(parts[2])
+        }
+        if (isNaN(seconds)) {
+            return 0
+        } else {
+            return seconds
+        }
+    }
+
+    const distanceField = document.getElementById("id_distance")
+    const timeField = document.getElementById("id_time")
+    const speedField = document.getElementById("id_speed")
+
+    function updateSpeed() {
+        const distance = Number(distanceField.value)
+        const time = parseTime(timeField.value)
+
+        if (isNaN(distance) || distance == 0 || time == 0) {
+            speedField.value = ""
+        } else {
+            const speed = distance / time * 3600
+            speedField.value = speed.toFixed(2)
+        }
+    }
+
+    (function () {
+        // Speed field of form
+        distanceField.addEventListener('input', updateSpeed)
+        timeField.addEventListener('input', updateSpeed)
+
+        updateSpeed()
+
+        // Validation
+        const form = document.getElementById("result-form")
+        form.addEventListener('submit', function (event) {
+
+        }, false)
+    })()
+
+    function submitForm() {
+        const form = document.getElementById("result-form")
+        const modal = document.getElementById("confirmation-modal")
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            form.classList.add('was-validated')
+        } else {
+            form.submit()
+        }
+
+        bootstrap.Modal.getInstance(modal).hide()
+    }
+</script>
+
+
+    </main>
+
+    <footer class="container">
+        <hr bg-light>
+        <div class="row pb-3">
+            <div class="col-sm-6">
+                
+                
+                <a href="https://www.batavierenrace.nl/english/team-captain-/information-for-team-captains-.html">
+                    Competition rules
+                </a><br />
+                
+                <a href="strava.html">
+                    Strava guide
+                </a><br />
+                <a href="mailto:online@batavierenrace.nl">online@batavierenrace.nl</a>
+            </div>
+            <div class="col-sm-6 d-flex justify-content-center justify-content-sm-end">
+                
+                
+                <a class="my-auto" href="https://www.batavierenrace.nl/english" target="_blank">
+                    <img class="socials-web" src="../static/results_processing/img/world.png" /></a>
+                
+                <a class="my-auto" href="https://www.instagram.com/batavierenrace" target="_blank">
+                    <img class="socials" src="../static/results_processing/img/socials/instagram_logo.png"></a>
+                <a class="my-auto" href="https://www.facebook.com/batavierenrace" target="_blank">
+                    <img class="socials" src="../static/results_processing/img/socials/facebook_logo.png"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
